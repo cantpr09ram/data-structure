@@ -43,5 +43,6 @@ int main(int argc, char *argv[]) {
 	p5 = &(s[37].f13.f12.f5);//0x62ee30 + 37*40(0x5c8) + 24(18) + 4 + 4(alignment) = 0x62f418 
 	
 	//0x62ee30 + 37*40(0x5c8) = 0x62f3f8
+	//411440430 bo-chain
 	return 0;
 }
