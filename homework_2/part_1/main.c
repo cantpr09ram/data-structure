@@ -31,7 +31,7 @@ struct parenthesis pop(struct parenthesis stack[], int *top) {
 bool isEmpty(int top) {
     return top == -1;
 }
-
+//411440430 bo-chain
 int main(int argc, char *argv[]) {
 
     struct parenthesis stack[SIZE] = {};
@@ -52,23 +52,27 @@ int main(int argc, char *argv[]) {
             if (topEle.element == '('){
                 printf("(%d, %d)\n", topEle.position, position);
             } else if (topEle.element == '\0'){
-                printf("right parenthesis at %d has no matching paraenthesis\n", position);
+                printf("位置編號 %d 的右括號沒有可配對的左括號\n", position);
+        
             }   
-            //top--; 
+            //top--;
+            // 
         }
         position++;
     }
 
     if (isEmpty(top)) {
-        printf("Balanced parentheses\n");
+        return 0;
     } else {
         printf("%d\n", top);
         
         while (!isEmpty(top)) {
-            printf("left parenthesis at %d has no matching paraenthesis\n", stack[top--].position);
+            printf("位置編號 %d 的左括號沒有可配對的右括號\n", stack[top--].position);
         }
     }
-
+	//411440430bo-chain
+	//((a+b)*c+d)
+	//(a+b))*((c+d)
     return 0;
 }
 
