@@ -47,6 +47,12 @@ int main(){
         k = rand()%100;
         push(&S, k);
     }
+    
+    for(i=0;i<9;i++){
+        printf("%d ",S.A[i]);
+        
+    }
+    printf("\n");
 
     
     //assign integer k the 2nd element from the top of the stack, leaveing S unchange
@@ -79,6 +85,7 @@ int main(){
         push(&S, k=pop(&s1));
     }
     //assign integer k the bottom element from the top of the stack, leaveing S unchange
+    //411440430 bo-chain
     while(!isEmpty(&S)){
         push(&s1, k = pop(&S));
     }
