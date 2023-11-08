@@ -58,6 +58,7 @@ int main(){
         }
     }
     //assign integer k the 2nd element from the top of the struct Q, leaveing Q unchange
+    //411440430 bo-chain
     for (i=0;i<2;i++){
         if(isEmpty(&Q)){
             printf("1-element queue");
