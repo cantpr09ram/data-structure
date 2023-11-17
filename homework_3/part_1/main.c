@@ -55,6 +55,7 @@ int main(){
     k=0;
     
     //question 1
+    printf("assign integer m the 3th element from the top of the stack");
     S.top = s1.top = -1;
     for(i=0;i<30;i++){
         k = rand()%100;
@@ -71,6 +72,7 @@ int main(){
     prints(&S);
 
     //question 2
+    printf("assign integer m the 3th element from the top of the stack, leaveing stack unchange");
     S.top = s1.top = -1;
     for(i=0;i<30;i++){
         k = rand()%100;
@@ -91,6 +93,7 @@ int main(){
     prints(&S);
 
     //question 3
+    printf("assign integer m the 10th element from the top of the stack");
     prints(&S);
     for(i=0; i<10; i++){
         if(isEmpty(&S)){
@@ -101,6 +104,7 @@ int main(){
     printf("%d\n", m);
     prints(&S);
     //question 4
+    printf("assign integer m the 10th element from the top of the stack, leaveing stack unchamge");
     S.top = s1.top = -1;
     for(i=0;i<30;i++){
         k = rand()%100;
@@ -121,6 +125,7 @@ int main(){
     prints(&S);
 
     //question 5
+    printf("assign integer m the 1st element from the bottom of the stack");
     prints(&S);
     while(!isEmpty(&S)){
         m = pop(&S);
@@ -128,6 +133,7 @@ int main(){
     printf("%d\n", m);
     prints(&S);
     //question 6
+    printf("assign integer m the 1st element from the bottom of the stack, leaveing stack unchange");
     S.top = s1.top = -1;
     for(i=0;i<30;i++){
         k = rand()%100;
@@ -145,6 +151,7 @@ int main(){
     prints(&S);
 
     //question 7
+    printf("assign integer m the 2nd element from the bottom of the stack");
     prints(&S);
     for(i=0; i<30 - 2; i++){
         if(isEmpty(&S)){
@@ -152,9 +159,11 @@ int main(){
         }
         m = pop(&S);
     }
+   
     printf("%d\n", m);
     prints(&S);
     //question 8
+    printf("assign integer m the 2nd element from the bottom of the stack, leaveing stack unchange");
     S.top = s1.top = -1;
     for(i=0;i<30;i++){
         k = rand()%100;
@@ -168,6 +177,7 @@ int main(){
         }
         push(&s1, m = pop(&S));
     }
+    
     printf("%d\n", m);
     while(!isEmpty(&s1)){
         push(&S, pop(&s1));
@@ -175,6 +185,7 @@ int main(){
     prints(&S);
 
     //question 9
+    printf("assign integer m the 3th element from the bottom of the stack, leaveing stack unchange");
     prints(&S);
     for(i=0; i<30 - 3; i++){
         if(isEmpty(&S)){
@@ -182,9 +193,11 @@ int main(){
         }
         m = pop(&S);
     }
+    
     printf("%d\n", m);
     prints(&S);
     //question 10
+    printf("assign integer m the 3th element from the bottom of the stack, leaveing stack unchange");
     S.top = s1.top = -1;
     for(i=0;i<30;i++){
         k = rand()%100;
@@ -198,6 +211,7 @@ int main(){
         }
         push(&s1, m = pop(&S));
     }
+    
     printf("%d\n", m);
     while(!isEmpty(&s1)){
         push(&S, pop(&s1));
@@ -205,6 +219,7 @@ int main(){
     prints(&S);
 
     //question 11
+    printf("assign integer m the 4th element from the bottom of the stack"); 
     prints(&S);
     for(i=0; i<30 - 4; i++){
         if(isEmpty(&S)){
@@ -212,9 +227,11 @@ int main(){
         }
         m = pop(&S);
     }
+    
     printf("%d\n", m);
     prints(&S);
     //question 12
+    printf("assign integer m the 4th element from the bottom of the stack, leaveing stack unchange");
     S.top = s1.top = -1;
     for(i=0;i<30;i++){
         k = rand()%100;
@@ -228,6 +245,7 @@ int main(){
         }
         push(&s1, m = pop(&S));
     }
+    
     printf("%d\n", m);
     while(!isEmpty(&s1)){
         push(&S, pop(&s1));

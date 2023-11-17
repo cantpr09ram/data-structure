@@ -5,8 +5,8 @@ int main(void){
     int m, i, j;
     printf("please enter any integer\n");
     scanf("%d",&m);
-    int *arr = malloc(sizeof(int) * (m+2) * (m+2));
-    for(i = 0; i< m+2 ; i++){
+    int *arr = malloc(sizeof(int) * (m+2) * (m+2)/2);
+    for(i = 0; i< m+2; i++){
         for(j = 0; j< i+1; j++){
             
             if(j == 0 || j == i){
