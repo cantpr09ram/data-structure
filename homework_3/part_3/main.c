@@ -47,7 +47,7 @@ int deleteq(queue *pq) {
 
 void printq(queue *pq) {
     int w;
-    for(int w = pq->front+1; w < pq->rear+1; w++){
+    for(w = pq->front+1; w < pq->rear+1; w++){
         printf("%2d ", pq->A[w]);
         if((w - pq->front)% 10 == 0  || w == pq->rear){
             printf("\n");
@@ -107,6 +107,7 @@ int main(void){
     }
     printq(&Q);
     //question 3
+    //411440430 bo-chain
     Q.front = Q.rear = RQ.front = RQ.rear = -1;
     Q.TotalinQueue = RQ.TotalinQueue = 0;
     printf("assign integer m the 10th element from the top of the queue\n");
@@ -155,6 +156,7 @@ int main(void){
     }
     printq(&Q);
     //question 5
+    //411440430 bo-chain
     Q.front = Q.rear = RQ.front = RQ.rear = -1;
     Q.TotalinQueue = RQ.TotalinQueue = 0;
     printf("assign integer m the 1st element from the bottom of the queue\n");
@@ -196,6 +198,7 @@ int main(void){
     }
     printq(&Q);
     //qustion 7
+    //411440430 bo-chain
     Q.front = Q.rear = RQ.front = RQ.rear = -1;
     Q.TotalinQueue = RQ.TotalinQueue = 0;
     printf("assign integer m the 2nd element from the bottom of the queue\n");
@@ -237,7 +240,8 @@ int main(void){
     }
     printq(&Q);
 
-    //qustion 9
+    //qustion 
+    //411440430 bo-chain
     Q.front = Q.rear = RQ.front = RQ.rear = -1;
     Q.TotalinQueue = RQ.TotalinQueue = 0;
     printf("assign integer m the 3th element from the bottom of the queue\n");
@@ -280,6 +284,7 @@ int main(void){
     printq(&Q);
 
     //qustion 11
+    //411440430 bo-chain
     Q.front = Q.rear = RQ.front = RQ.rear = -1;
     Q.TotalinQueue = RQ.TotalinQueue = 0;
     printf("assign integer m the 4th element from the bottom of the queue\n");
@@ -298,6 +303,7 @@ int main(void){
     printq(&Q);
 
     //question 12
+    //411440430 bo-chain
     Q.front = Q.rear = RQ.front = RQ.rear = -1;
     Q.TotalinQueue = RQ.TotalinQueue = 0;
     printf("assign integer m the 4th element from the bottom of the queue, leaveing queue unchange\n");

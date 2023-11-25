@@ -55,6 +55,7 @@ int main(){
     k=0;
     
     //question 1
+    //411440430 bo-chain
     printf("assign integer m the 3th element from the top of the stack");
     S.top = s1.top = -1;
     for(i=0;i<30;i++){
@@ -93,6 +94,7 @@ int main(){
     prints(&S);
 
     //question 3
+    //411440430 bo-chain
     printf("assign integer m the 10th element from the top of the stack");
     prints(&S);
     for(i=0; i<10; i++){
@@ -125,6 +127,7 @@ int main(){
     prints(&S);
 
     //question 5
+    //411440430 bo-chain
     printf("assign integer m the 1st element from the bottom of the stack");
     prints(&S);
     while(!isEmpty(&S)){
@@ -151,6 +154,7 @@ int main(){
     prints(&S);
 
     //question 7
+    //411440430 bo-chain
     printf("assign integer m the 2nd element from the bottom of the stack");
     prints(&S);
     for(i=0; i<30 - 2; i++){
@@ -185,6 +189,7 @@ int main(){
     prints(&S);
 
     //question 9
+    //411440430 bo-chain
     printf("assign integer m the 3th element from the bottom of the stack, leaveing stack unchange");
     prints(&S);
     for(i=0; i<30 - 3; i++){
@@ -219,6 +224,7 @@ int main(){
     prints(&S);
 
     //question 11
+    //411440430 bo-chain
     printf("assign integer m the 4th element from the bottom of the stack"); 
     prints(&S);
     for(i=0; i<30 - 4; i++){

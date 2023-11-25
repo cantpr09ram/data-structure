@@ -43,7 +43,7 @@ int deleteq(queue *pq) {
 
 void printq(queue *pq) {
     int w;
-    for(int w = pq->front+1; w < pq->rear+1; w++){
+    for(w = pq->front+1; w < pq->rear+1; w++){
         printf("%2d ", pq->A[w]);
         if((w+1)% 10 == 0 ){
             printf("\n");
@@ -96,6 +96,7 @@ int main(void){
     
     printq(&Q);
     //question 3
+    //411440430 bo-chain
     Q.front = Q.rear = RQ.front = RQ.rear = -1;
     printf("assign integer m the 1st element from the bottom of the queue\n");
     for(i=0;i<30;i++){
