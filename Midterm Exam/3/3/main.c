@@ -9,17 +9,17 @@
 typedef struct {
     int A[SIZE];
     int front, rear;
-    bool lastOperationIsDeleteq;
+    int TotalinQueue;
 }queue;
 
 queue Q, RQ;
 
 int isEmpty(queue *pq) {
-    return (pq->front == pq->rear);
+    return (pq->front == pq->rear && pq->TotalinQueue == 0);
 };
 
 bool isFull(queue *pq) {
-    return(pq->front == pq->rear && !pq->lastOperationIsDeleteq);
+    return(pq->front == (pq->rear+1)%SIZE && pq->TotalinQueue == SIZE);
 };
 
 void addq(queue *pq, int data){
@@ -27,7 +27,7 @@ void addq(queue *pq, int data){
         printf("Queue is full.\n");
         exit(1);
     }
-    pq->lastOperationIsDeleteq = false;
+    pq->TotalinQueue += 1;
     pq->rear = (pq->rear + 1) % SIZE;
     pq->A[pq->rear] = data;
 };
@@ -37,55 +37,29 @@ int deleteq(queue *pq) {
         printf("Queue is empty.\n");
         exit(2); 
     }
-    pq->lastOperationIsDeleteq = true;
+    pq->TotalinQueue -= 1;
     pq->front = (pq->front + 1) % SIZE;
     return pq->A[pq->front];
 }
 
 void printq(queue *pq) {
     int w;
-    for(w = pq->front+1; w < pq->rear+1; w++){
+    for(w = pq->TotalinQueue ; w >=0; w--){
         printf("%3d ", pq->A[w]);
         if((w - pq->front)% 9 == 0  || w == pq->rear){
-            printf("\n");
+            printf(" \n");
         }
     }
 }
-//-------------------------------------------------------------------
-//question 3.1
-//
-//(a)
-//[ | | | | |(front)| | |(rear)]
-/*
-int isEmpty(queue *pq) {
-    return ((pq->front+3 % size) == pq->rear && pq -> lastOperationIsDeleteq);
-};
-//[ 0(frront)|1|2|3(rear)|4|5|6|7|8]
-bool isFull(queue *pq) {
-    return((pq->front+3 % size) == pq->rear && !pq->lastOperationIsDeleteq);
-};
-*/
-
-//(b)
-//[ | |(front)| (rear)| | ]
-/*
-int isEmpty(queue *pq) {
-    return ((pq->front+5 % size) == pq->rear && pq -> lastOperationIsDeleteq);
-};
-//[0|1|2|3|4(front)|5|6|7|8(rear)]
-bool isFull(queue *pq) {
-    return((pq->front+5 % size) == pq->rear && !pq->lastOperationIsDeleteq);
-};
-*/
 int main(void){
     srand(time(NULL));
-    int k, i, m;
+    int i, m, t, length, k;
     
     //411440430 bo-chain
     // question 1
     Q.front = Q.rear = RQ.front = RQ.rear = -1;
-    RQ.lastOperationIsDeleteq = Q.lastOperationIsDeleteq = 1;
-    printf("question 3.2 (a)\n");
+    Q.TotalinQueue = RQ.TotalinQueue = 0;
+    printf("question 3.3 (a)\n");
     for(i=0;i<18;i++){
         k = rand()%100+1;
         addq(&Q, k);
@@ -94,23 +68,25 @@ int main(void){
             printf("\n");
         }
     }
-    
-    for (i=0;i<10;i++){
+    //question 2
+    length = Q.TotalinQueue + 1;
+    for (i=0; i<length -4; i++){
         if(isEmpty(&Q)){
             printf("%d-element queue",i);
             exit(3);
         }
-        addq(&RQ, k = deleteq(&Q));
+        k = deleteq(&Q);
     }
     printf("question 3.2 (b) n = %d\n", k);
+
     while(!isEmpty(&Q)){
          addq(&RQ, deleteq(&Q));
     }
     while(!isEmpty(&RQ)){
          addq(&Q, deleteq(&RQ));
     }
+    //question 3
     printf("question 3.2 (c)\n");
     printq(&Q);
-    
     return 0;
 }
