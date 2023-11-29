@@ -77,7 +77,7 @@ int main(void){
         }
         k = deleteq(&Q);
     }
-    printf("question 3.2 (b) n = %d\n", k);
+    printf("question 3.3 (b) n = %d\n", k);
 
     while(!isEmpty(&Q)){
          addq(&RQ, deleteq(&Q));
@@ -86,7 +86,7 @@ int main(void){
          addq(&Q, deleteq(&RQ));
     }
     //question 3
-    printf("question 3.2 (c)\n");
+    printf("question 3.3 (c)\n");
     printq(&Q);
     return 0;
 }
