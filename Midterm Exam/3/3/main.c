@@ -82,6 +82,12 @@ int main(void){
     
     //question 3
     printf("question 3.2 (c)\n");
-    printq(&Q);
+    if (isEmpty(&Q)){
+        printf("queue is empty\n");
+    }else{
+        printq(&Q);
+    }
+    
+    
     return 0;
 }
