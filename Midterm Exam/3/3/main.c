@@ -44,7 +44,7 @@ int deleteq(queue *pq) {
 
 void printq(queue *pq) {
     int w;
-    for(w = pq->TotalinQueue ; w >=0; w--){
+    for(w = pq->TotalinQueue - 1; w >=0; w--){
         printf("%3d ", pq->A[w]);
         if((w - pq->front)% 9 == 0  || w == pq->rear){
             printf(" \n");
@@ -69,24 +69,23 @@ int main(void){
         }
     }
     //question 2
+    int a = 0, b = 0,c = 0; 
     length = Q.TotalinQueue + 1;
-    for (i=0; i<length -4; i++){
-        if(isEmpty(&Q)){
-            printf("%d-element queue",i);
-            exit(3);
-        }
+    while(!isEmpty(&Q)){
+        a = b;
+        b = c;
+        c = k;
         k = deleteq(&Q);
     }
-    printf("question 3.2 (b) n = %d\n", k);
+    printf("question 3.2 (b) n = %d\n", a);
 
-    while(!isEmpty(&Q)){
-         addq(&RQ, deleteq(&Q));
-    }
-    while(!isEmpty(&RQ)){
-         addq(&Q, deleteq(&RQ));
-    }
+    
     //question 3
     printf("question 3.2 (c)\n");
-    printq(&Q);
+    if (!isEmpty(&Q)){
+        printq(&Q);
+    }else{
+        printf("queue is empty\n");
+    }
     return 0;
 }
