@@ -77,15 +77,11 @@ int main(void){
         c = k;
         k = deleteq(&Q);
     }
-    printf("question 3.2 (b) n = %d\n", a);
+    printf("question 3.2 (b) n = %d\n", k);
 
     
     //question 3
     printf("question 3.2 (c)\n");
-    if (!isEmpty(&Q)){
-        printq(&Q);
-    }else{
-        printf("queue is empty\n");
-    }
+    printq(&Q);
     return 0;
 }
