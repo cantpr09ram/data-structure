@@ -4,7 +4,7 @@
 #define SIZE 100
 
 typedef struct listNode *listPointer;
-
+//411440430 bo-chain
 struct listNode{
     char symbol;
     int position;
