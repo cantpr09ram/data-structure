@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+//411440430 \u8b19
 typedef struct listNode *listPointer;
 struct listNode {
     int data;
@@ -52,7 +52,7 @@ int main(void) {
     int i, m, k;
 
     //question 1
-    printf("assign integer m the 3th element from the top of the stack, leaveing stack unchange\n");
+    printf("assign integer m the 1st element from the top of the stack, leaveing stack unchange\n");
     S.top = S1.top = NULL; // Initialize two stacks
     for(i=0;i<30;i++){
         k = rand()%100;
@@ -72,7 +72,7 @@ int main(void) {
         push(&S, pop(&S1));
     }
     prints(&S);
-
+	//411440430 \u8b19
     //question 2
     printf("assign integer m the 3th element from the top of the stack, leaveing stack unchange\n");
     S.top = S1.top = NULL; // Initialize two stacks
@@ -114,7 +114,7 @@ int main(void) {
         push(&S, pop(&S1));
     }
     prints(&S);
-
+	//411440430 \u8b19
     //question 3
     printf("assign integer m 10th element from the bottom of the stack, leaveing stack unchange\n");
     S.top = S1.top = NULL; // Initialize two stacks
