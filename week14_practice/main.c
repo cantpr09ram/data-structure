@@ -151,6 +151,24 @@ void RandNPush(listPointer *ptr, int N_size) {
     }
 }
 
+void printC(listPointer p){
+    int count =0;
+    listPointer temp;
+    temp=p->link;
+    while(temp!=p){
+        printf("%2d,",temp->data);
+        temp=temp->link;
+        count++;
+        if(count%10 == 0){
+            printf("\n");
+        }
+    }
+    printf("%2d",temp->data);
+    if(count%10 == 0){
+        printf("\n");
+    }
+}
+
 listPointer prevList = NULL;
 
 listPointer deepCopy(listPointer original) {
@@ -207,8 +225,8 @@ int main() {
 	// (5) Convert the list to a circular linked list
 	printf("\n(5) List after convering to a circular linked list\n");
 	Lin2Cir(list);
-	//	printList(list);
-	
+	printC(list);
+	printf("\n");
 	// (6) Delete every sixth element in the circular list
 	printf("\n(6) Deleted node with data every 6th element:\n");
     temp = prevList;
