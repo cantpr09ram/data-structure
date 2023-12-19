@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+//411440430 \u8b19
 typedef struct listNode *listPointer;
 struct listNode {
     int data;
@@ -49,7 +49,7 @@ void prints(struct stack *ps){
 void addq(struct stack* ps, int data) {
     push(ps, data);
 }
-
+//411440430 \u8b19
 int deleteq(struct stack* ps_in) {
     struct stack ps_out;
     ps_out.top = NULL;
@@ -77,7 +77,7 @@ int main() {
     int i, m, k;
     // Initialize the stacks
     s1.top = s2.top = NULL;
-
+	//411440430 \u8b19
     printf("assign integer m 3th element from the top of the queue\n");
    // Initialize the stacks
     s1.top = s2.top = NULL;
@@ -88,7 +88,7 @@ int main() {
     }
     prints(&s1);
     
-    for(int i=0; i<3; i++){
+    for(i=0; i<3; i++){
         addq(&s2, m = deleteq(&s1));
     }
     printf("%d\n", m);
@@ -104,7 +104,7 @@ int main() {
     }
     prints(&s1);
     
-    for(int i=0; i<3; i++){
+    for(i=0; i<3; i++){
         addq(&s2, m = deleteq(&s1));
     }
     printf("%d\n", m);
@@ -116,7 +116,7 @@ int main() {
         addq(&s1, deleteq(&s2));
     }
     prints(&s1);
-
+	//411440430 \u8b19
     printf("assign integer m 12th element from the top of the queue\n");
    // Initialize the stacks
     s1.top = s2.top = NULL;
@@ -127,7 +127,7 @@ int main() {
     }
     prints(&s1);
     
-    for(int i=0; i<12; i++){
+    for(i=0; i<12; i++){
         addq(&s2, m = deleteq(&s1));
     }
     printf("%d\n", m);
@@ -143,7 +143,7 @@ int main() {
     }
     prints(&s1);
     
-    for(int i=0; i<12; i++){
+    for(i=0; i<12; i++){
         addq(&s2, m = deleteq(&s1));
     }
     printf("%d\n", m);
@@ -155,7 +155,7 @@ int main() {
         addq(&s1, deleteq(&s2));
     }
     prints(&s1);
-
+	//411440430 \u8b19
     printf("assign integer m 1st element from the bottom of the queue\n");
    // Initialize the stacks
     s1.top = s2.top = NULL;
@@ -167,7 +167,7 @@ int main() {
     prints(&s1);
     
     while(!empty(&s1)) {
-        addq(&s2, deleteq(&s1));
+        addq(&s2, m = deleteq(&s1));
     }
     printf("%d\n", m);
     prints(&s1);
@@ -183,7 +183,7 @@ int main() {
     prints(&s1);
     
     while(!empty(&s1)) {
-        addq(&s2, deleteq(&s1));
+        addq(&s2, m= deleteq(&s1));
     }
     printf("%d\n", m);
 

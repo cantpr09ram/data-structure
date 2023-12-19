@@ -8,7 +8,7 @@ struct listNode {
     int data;
     listPointer link;
 };
-//411440430 bo-chain
+//411440430 \u8b19
 // Function to insert a node at the beginning of the list
 void insert(listPointer *ptr, int x) {
     listPointer newNode = (listPointer)malloc(sizeof(struct listNode));
@@ -55,7 +55,7 @@ int delete(listPointer *ptr) {
         return data;
     }
 }
-//411440430 bo-chain
+//411440430 \u8b19
 int deleteC(listPointer *ptr) {
     listPointer temp = (*ptr);
 
@@ -100,7 +100,7 @@ listPointer concatenate(listPointer ptr1, listPointer ptr2) {
     temp->link = ptr2;
     return ptr1;
 }
-//411440430 bo-chain
+//411440430 \u8b19
 // Function to invert a list
 listPointer invert(listPointer lead) {
     listPointer middle, trail;
@@ -142,7 +142,7 @@ void printList(listPointer first) {
     }
     printf("\n");
 }
-//411440430 bo-chain
+//411440430 \u8b19
 void RandNPush(listPointer *ptr, int N_size) {
     while (N_size != 0) {
         int number = rand() % 100;
@@ -184,7 +184,7 @@ listPointer deepCopy(listPointer original) {
 
 int main() {
 	listPointer list = NULL;
-	//411440430 bo-chain
+	//411440430 \u8b19
     // (1) Insert 50 random numbers
 	srand((unsigned)time(NULL));
     RandNPush(&list, 50);
@@ -216,7 +216,7 @@ int main() {
 	
 	printf("\n(3) evenList:\n");
 	printList(evenList);
-	//411440430 bo-chain
+	//411440430 \u8b19
 	// (4) Concatenate oddList to the front of the original list
 	printf("\n(4) List after concatenating oddList to the front:\n");
 	list = concatenate(oddList, evenList);

@@ -28,7 +28,7 @@ void addq(struct queue *pq, int x){
     }
 	pq->rear = p;
 }
-
+//411440430 \u8b19
 int deleteq(struct queue *pq){
     if(emptys(pq)){
         printf("the queue is empty");
@@ -104,6 +104,7 @@ int main(void) {
         addq(&Q, deleteq(&Q1));
     }
     prints(&Q);
+    //411440430 \u8b19
     //question 3
     printf("assign integer m 3th element from the bottom of the queue\n");
     Q.front = Q1.front = Q.rear = Q1.rear = NULL; // Initialize two queue
@@ -147,6 +148,7 @@ int main(void) {
         addq(&Q, deleteq(&Q1));
     }
     prints(&Q);
+    //411440430 \u8b19
     //question 5
     printf("assign integer m 4th element from the bottom of the queue, leaveing queue unchange\n");
     Q.front = Q1.front = Q.rear = Q1.rear = NULL; // Initialize two queue

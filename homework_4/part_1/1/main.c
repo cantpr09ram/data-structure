@@ -12,7 +12,7 @@ struct listNode {
 struct stack {
     listPointer top;
 } S;
-
+//411440430 bo-chain
 listPointer top = NULL; // initial empty stack
 
 int empty(struct stack *ps){
