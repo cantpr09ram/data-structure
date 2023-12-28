@@ -11,9 +11,9 @@ typedef struct node {
 
 void inorder (treePointer ptr) {
     if (ptr) {
-        inorder(ptr->leftChild);
+        inorder(ptr->leftChild); // 2*ptr + 1
         printf("%d", ptr->data);
-        inorder(ptr->rightChild);
+        inorder(ptr->rightChild); // 2*ptr + 2
     }
     
 }
